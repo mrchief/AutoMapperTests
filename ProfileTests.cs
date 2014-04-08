@@ -3,28 +3,27 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AutoMapperTests
 {
-	internal class A
-	{
-		public string PropFlag { get; set; }
-	}
-
-	internal class B
-	{
-		public string Prop { get; set; }
-	}
-
-	internal class PrefixTestProfile : Profile
-	{
-		protected override void Configure()
-		{
-			RecognizePostfixes("Flag");
-			Mapper.CreateMap<A, B>();
-		}
-	}
-
 	[TestClass]
 	public class ProfileTests
 	{
+		class A
+		{
+			public string PropFlag { get; set; }
+		}
+
+		class B
+		{
+			public string Prop { get; set; }
+		}
+
+		internal class PrefixTestProfile : Profile
+		{
+			protected override void Configure()
+			{
+				RecognizePostfixes("Flag");
+				CreateMap<A, B>();
+			}
+		}
 
 		public ProfileTests()
 		{

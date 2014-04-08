@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="ProfileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CreateMapTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
